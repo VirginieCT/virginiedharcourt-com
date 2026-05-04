@@ -1,360 +1,405 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- OPTIMISATION SEO & LINKEDIN -->
-    <title>Virginie d’Harcourt - Stratégie & Exécution Transverse</title>
-    <meta name="description" content="Profil Exécutif : Directeur Marketing France/EMEA, Chief of Staff, Direction de Projets. +20 ans d'expérience. Disponible immédiatement.">
-    <meta name="keywords" content="Directeur Marketing, Chief of Staff, Project Management, Management de Transition, EMEA, Lead Gen, Stratégie, Executive">
+    <title>Virginie d’Harcourt - Directrice Marketing et Communication B2B | Stratégie & Croissance</title>
+    <meta name="description" content="Directrice Marketing & Communication B2B. Expertise solutions et services à forte valeur ajoutée. Ex-Teleperformance & Quadient. Stratégie GTM, Demand Gen et Management Transversal.">
     <meta name="author" content="Virginie d'Harcourt">
 
     <!-- Open Graph / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.virginiedharcourt.com/expertise"> 
-    <meta property="og:title" content="Virginie d’Harcourt - Stratégie | Exécution | Performance">
-    <meta property="og:description" content="Cadre dirigeante disponible immédiatement. Expertises : Marketing France/EMEA, Chief of Staff, Projets Transverses. Approche ROIste et Agile.">
-    <meta property="og:image" content="Portrait_POR_Teleperformance_0003.jpg">
+    <meta property="og:url" content="https://www.virginiedharcourt.com"> 
+    <meta property="og:title" content="Virginie d’Harcourt - Directrice Marketing & Communication B2B">
+    <meta property="og:image" content="68ffad15-2bf9-41a8-805e-5023d6137653.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        .active-tab {
+        .tab-active {
             border-bottom: 3px solid #ea580c;
             color: #0f172a;
             font-weight: 700;
         }
-        .inactive-tab {
+        .tab-inactive {
             color: #64748b;
             border-bottom: 3px solid transparent;
             font-weight: 600;
         }
-        .inactive-tab:hover {
+        .tab-inactive:hover {
             color: #ea580c;
         }
 
-        #nav-tech.active-tab {
-            border-bottom-color: #10b981;
-            color: #064e3b;
+        /* Styles pour les sous-onglets Expertises */
+        .sub-tab-active {
+            border: 2px solid #ea580c;
+            background: white;
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.08);
         }
-        #nav-tech.inactive-tab:hover {
-            color: #10b981;
+        .sub-tab-inactive {
+            border: 1px solid #e2e8f0;
+            background: white;
+            opacity: 0.7;
         }
-        
+        .sub-tab-inactive:hover {
+            opacity: 1;
+            border-color: #cbd5e1;
+        }
+
         .fade-in {
-            animation: fadeIn 0.4s ease-out;
+            animation: fadeIn 0.4s ease-out forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col">
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col antialiased">
 
-    <!-- 1. HEADER / HERO SECTION -->
-    <div class="bg-white border-b border-slate-200 shadow-sm pt-8 pb-0">
+    <!-- 1. HERO HEADER -->
+    <header class="bg-white border-b border-slate-100 pt-10 pb-0">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
                 
-                <!-- Photo avec correction onerror -->
-                <div class="flex-shrink-0 mx-auto md:mx-0">
+                <!-- Photo circulaire (Maintenue inchangée) -->
+                <div class="flex-shrink-0">
                     <img src="Portrait_POR_Teleperformance_0003.jpg" 
                          alt="Virginie d'Harcourt" 
-                         class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-center ring-4 ring-slate-50 shadow-md"
-                         onerror="this.src='https://ui-avatars.com/api/?name=Virginie+d+Harcourt&background=ea580c&color=fff&size=150'">
+                         class="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover object-center shadow-lg border-4 border-white"
+                         onerror="this.src='https://ui-avatars.com/api/?name=Virginie+d+Harcourt&background=ea580c&color=fff&size=200'">
                 </div>
 
-                <!-- Identity & Stats -->
-                <div class="flex-grow text-center md:text-left">
-                    <div class="mb-3">
-                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-1">Virginie d’Harcourt</h1>
-                        <p class="text-lg font-bold text-orange-600">Stratégie | Exécution Transverse | Performance</p>
-                    </div>
+                <!-- Identity Block -->
+                <div class="flex-grow text-center md:text-left mt-2">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-[#0f172a] tracking-tight mb-2">
+                        Virginie d’Harcourt
+                    </h1>
+                    <!-- md:pl-1 pour l'alignement optique avec le 'V' -->
+                    <h2 class="text-xl md:text-2xl font-bold text-orange-600 mb-8 md:pl-1">
+                        Directrice Marketing et Communication B2B | Stratégie & Performance
+                    </h2>
                     
-                    <!-- Actions & Métadonnées groupées -->
-                    <div class="flex flex-wrap justify-center md:justify-start items-center gap-3 text-slate-600 text-[11px] font-bold uppercase tracking-wider">
-                        
-                        <!-- Action Me Contacter avec icône LinkedIn -->
-                        <a href="https://www.linkedin.com/in/virginiedharcourt" target="_blank" class="bg-slate-100 hover:bg-slate-200 text-slate-900 px-3 py-1.5 rounded border border-slate-200 transition-colors flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <!-- Row of badges -->
+                    <div class="flex flex-wrap justify-center md:justify-start items-center gap-3">
+                        <a href="https://www.linkedin.com/in/virginiedharcourt" target="_blank" class="bg-[#0f172a] text-white px-4 py-2 rounded-md flex items-center gap-2 text-xs font-bold uppercase tracking-wider hover:bg-slate-800 transition-colors shadow-sm">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             Me Contacter
                         </a>
-
-                        <span class="bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded border border-emerald-100 flex items-center">
-                            <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>Disponible immédiatement
-                        </span>
-                        
-                        <span class="flex items-center px-1"><svg class="w-4 h-4 mr-1.5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2.5"></path></svg>+20 ans exp.</span>
-                        <span class="flex items-center px-1"><svg class="w-4 h-4 mr-1.5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="2.5"></path></svg>Paris / BXL</span>
+                        <div class="bg-[#E6FAF0] text-[#00A36C] px-4 py-2 rounded-md border border-[#B2E6D1] text-xs font-bold uppercase tracking-wider flex items-center">
+                            <span class="w-2 h-2 bg-[#00A36C] rounded-full mr-2 animate-pulse"></span>
+                            Disponible immédiatement
+                        </div>
+                        <div class="bg-white text-slate-500 px-4 py-2 rounded-md border border-slate-200 text-xs font-bold uppercase tracking-wider">
+                            +20 ans exp.
+                        </div>
+                        <div class="bg-white text-slate-500 px-4 py-2 rounded-md border border-slate-200 text-xs font-bold uppercase tracking-wider">
+                            CDI / CDD / Transition
+                        </div>
                     </div>
-                </div>
-
-                <!-- Rôles Cibles -->
-                <div class="w-full md:w-auto bg-orange-50 rounded-lg p-5 border border-orange-100 md:min-w-[280px] shadow-sm">
-                    <h3 class="text-[10px] font-bold text-orange-800 uppercase tracking-widest mb-3 border-b border-orange-200 pb-2">Rôles Cibles</h3>
-                    <ul class="space-y-2 text-sm font-bold text-slate-800">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span>Dir. Marketing France/EMEA</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span>Chief of Staff</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span>Dir. Projets Transverses</li>
-                        <li class="flex items-center text-slate-400 text-xs font-medium pt-1">
-                            <span class="w-1.5 h-1.5 bg-slate-300 rounded-full mr-2"></span>CDI / CDD / Transition
-                        </li>
-                    </ul>
                 </div>
             </div>
 
-            <!-- Navigation -->
-            <nav class="flex space-x-8 border-t border-slate-100 pt-1 overflow-x-auto" aria-label="Tabs">
-                <button id="nav-valeur" class="active-tab py-4 px-1 text-sm uppercase tracking-wide transition-all whitespace-nowrap" onclick="switchTab('valeur')">Mon Approche</button>
-                <button id="nav-expertise" class="inactive-tab py-4 px-1 text-sm uppercase tracking-wide transition-all whitespace-nowrap" onclick="switchTab('expertise')">Expertises</button>
-                <button id="nav-style" class="inactive-tab py-4 px-1 text-sm uppercase tracking-wide transition-all whitespace-nowrap" onclick="switchTab('style')">Leadership</button>
-                <button id="nav-modalites" class="inactive-tab py-4 px-1 text-sm uppercase tracking-wide transition-all whitespace-nowrap" onclick="switchTab('modalites')">Modalités</button>
-                <button id="nav-tech" class="inactive-tab py-4 px-1 text-sm uppercase tracking-wide transition-all whitespace-nowrap" onclick="switchTab('tech')">Innovation</button>
+            <!-- Navigation Tabs -->
+            <nav class="flex space-x-8 border-t border-slate-100 overflow-x-auto no-scrollbar" aria-label="Tabs">
+                <button onclick="switchTab('approche')" id="nav-approche" class="tab-active py-5 px-1 text-xs uppercase tracking-widest transition-all whitespace-nowrap">Mon Approche</button>
+                <button onclick="switchTab('expertise')" id="nav-expertise" class="tab-inactive py-5 px-1 text-xs uppercase tracking-widest transition-all whitespace-nowrap">Expertises</button>
+                <button onclick="switchTab('leadership')" id="nav-leadership" class="tab-inactive py-5 px-1 text-xs uppercase tracking-widest transition-all whitespace-nowrap">Leadership</button>
+                <button onclick="switchTab('modalites')" id="nav-modalites" class="tab-inactive py-5 px-1 text-xs uppercase tracking-widest transition-all whitespace-nowrap">Modalités</button>
+                <button onclick="switchTab('innovation')" id="nav-innovation" class="tab-inactive py-5 px-1 text-xs uppercase tracking-widest transition-all whitespace-nowrap italic">Innovation ✨</button>
             </nav>
         </div>
-    </div>
+    </header>
 
-    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+    <!-- 2. CONTENU PRINCIPAL -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
 
-        <!-- TAB 1: MON APPROCHE -->
-        <div id="view-valeur" class="fade-in block">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 border-t-4 border-orange-600 shadow-sm rounded-b-lg">
-                    <div class="text-3xl font-bold text-slate-900 mb-2">ROI</div>
-                    <h4 class="font-bold text-slate-800 uppercase text-sm mb-2">Culture du Résultat</h4>
-                    <p class="text-sm text-slate-600">Mesure de l'impact business et de la valeur ajoutée réelle de chaque action menée.</p>
-                </div>
-                <div class="bg-white p-6 border-t-4 border-slate-700 shadow-sm rounded-b-lg">
-                    <div class="text-3xl font-bold text-slate-900 mb-2">360°</div>
-                    <h4 class="font-bold text-slate-800 uppercase text-sm mb-2">Double Vision</h4>
-                    <p class="text-sm text-slate-600">Aligner la vision stratégique (Business, P&L, Marque) à l'excellence opérationnelle du terrain.</p>
-                </div>
-                <div class="bg-white p-6 border-t-4 border-slate-400 shadow-sm rounded-b-lg">
-                    <div class="text-3xl font-bold text-slate-900 mb-2">AGILE</div>
-                    <h4 class="font-bold text-slate-800 uppercase text-sm mb-2">Transversalité</h4>
-                    <p class="text-sm text-slate-600">Décloisonner, orchestrer, faire collaborer les experts, écoute active.</p>
-                </div>
-            </div>
-            
-            <div class="mt-8 bg-white p-6 rounded border border-slate-200 shadow-sm">
-                <h3 class="font-bold text-slate-900 mb-2 text-lg">Mon Parcours</h3>
-                <p class="text-slate-700 leading-relaxed">
-                    Issue du marketing, de la communication et de l'acquisition (Ex-Teleperformance, Quadient), j’ai mené divers projets transverses dans des contextes multiculturels exigeants. Évoluer dans des environnements en constante transformation a forgé ma résilience et mon agilité. Cette capacité d’adaptation me permet aujourd'hui de <strong>gérer avec succès tous types de projets</strong>, stratégiques ou opérationnels.
-                </p>
-            </div>
-        </div>
+        <!-- SECTION: MON APPROCHE -->
+        <section id="view-approche" class="fade-in block">
+            <div class="space-y-8">
+                <!-- Grille des 3 Cartes -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- ROI -->
+                    <div class="bg-white p-10 border-t-[5px] border-orange-600 shadow-sm rounded-xl">
+                        <div class="text-4xl font-extrabold text-slate-900 mb-2">ROI</div>
+                        <h4 class="font-bold text-slate-800 uppercase text-xs mb-4 tracking-wider">Culture du Résultat</h4>
+                        <p class="text-[13px] text-slate-600 leading-relaxed">Mesure de l'impact business et de la valeur ajoutée réelle de chaque action menée pour garantir une croissance rentable.</p>
+                    </div>
 
-        <!-- TAB 2: EXPERTISES -->
-        <div id="view-expertise" class="fade-in hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-                <button onclick="showExpertiseDetail('marketing')" id="btn-marketing" class="p-6 rounded bg-white border border-slate-200 text-left transition-all shadow-sm ring-2 ring-orange-600 ring-offset-2">
-                    <h3 class="font-bold text-lg text-orange-700">Dir. Marketing et Com</h3>
-                    <p class="text-sm text-slate-500">Acquisition, campagnes, marques et contenus</p>
-                </button>
-                <button onclick="showExpertiseDetail('staff')" id="btn-staff" class="p-6 rounded bg-white border border-slate-200 text-left transition-all shadow-sm hover:shadow-md">
-                    <h3 class="font-bold text-lg text-slate-800">Chief of Staff (CoS)</h3>
-                    <p class="text-sm text-slate-500">Coordination, Priorités & Rigueur</p>
-                </button>
-                <button onclick="showExpertiseDetail('project')" id="btn-project" class="p-6 rounded bg-white border border-slate-200 text-left transition-all shadow-sm hover:shadow-md">
-                    <h3 class="font-bold text-lg text-slate-800">Dir. Projets Transverses</h3>
-                    <p class="text-sm text-slate-500">Pilotage stratégique & Efficacité opérationnelle</p>
-                </button>
-            </div>
-            <div id="expertise-detail-container" class="bg-white rounded border border-slate-200 p-8 shadow-sm min-h-[300px]"></div>
-        </div>
+                    <!-- 360° -->
+                    <div class="bg-white p-10 border-t-[5px] border-[#2C3E50] shadow-sm rounded-xl">
+                        <div class="text-4xl font-extrabold text-slate-900 mb-2">360°</div>
+                        <h4 class="font-bold text-slate-800 uppercase text-xs mb-4 tracking-wider">Double Vision</h4>
+                        <p class="text-[13px] text-slate-600 leading-relaxed">Aligner la vision stratégique (Business, P&L, Marque) à l'excellence opérationnelle du terrain.</p>
+                    </div>
 
-        <!-- TAB 3: LEADERSHIP -->
-        <div id="view-style" class="fade-in hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded border border-slate-200 p-8 shadow-sm">
-                    <h3 class="text-lg font-bold text-slate-900 mb-6 uppercase tracking-wider">Soft Skills</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <span class="text-sm font-bold text-slate-700 uppercase tracking-wide">Pilotage collaboratif</span>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-1">Écoute active et décloisonnement des silos.</p>
-                        </div>
-                        <div class="border-t border-slate-50 pt-4">
-                            <span class="text-sm font-bold text-slate-700 uppercase tracking-wide">Rigueur & Excellence Organisationnelle</span>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-1">Maîtrise de la structuration de projets complexes et de l'organisation d'évènements.</p>
-                        </div>
-                        <div class="border-t border-slate-50 pt-4">
-                            <span class="text-sm font-bold text-slate-700 uppercase tracking-wide">Gestion des Priorités</span>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-1">Navigue agilement entre l'urgence opérationnelle et la planification stratégique.</p>
-                        </div>
-                        <div class="border-t border-slate-50 pt-4">
-                            <span class="text-sm font-bold text-slate-700 uppercase tracking-wide">Efficacité Opérationnelle</span>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-1">Orientée solutions, ténacité et proactivité.</p>
-                        </div>
+                    <!-- AGILE -->
+                    <div class="bg-white p-10 border-t-[5px] border-[#AAB7B8] shadow-sm rounded-xl">
+                        <div class="text-4xl font-extrabold text-slate-900 mb-2">AGILE</div>
+                        <h4 class="font-bold text-slate-800 uppercase text-xs mb-4 tracking-wider">Transversalité</h4>
+                        <p class="text-[13px] text-slate-600 leading-relaxed">Décloisonner, orchestrer, faire collaborer les experts, écoute active.</p>
                     </div>
                 </div>
 
-                <div class="space-y-6">
-                    <div class="bg-slate-50 rounded border-l-4 border-orange-500 p-6 shadow-sm h-full">
-                        <div class="flex justify-between items-baseline mb-3">
-                            <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider">Recommandation</h3>
-                            <a href="https://www.linkedin.com/in/virginiedharcourt/details/recommendations/" target="_blank" class="text-xs text-orange-600 hover:text-orange-800 font-bold flex items-center">Voir LinkedIn</a>
-                        </div>
-                        <p class="text-sm text-slate-700 italic leading-relaxed">
-                            "Virginie apporte une combinaison d'expertise marketing solide et d'une forte capacité d'exécution. Elle est fiable, proactive et toujours orientée vers la recherche de solutions — pas seulement pour son propre périmètre, mais pour l'équipe élargie."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TAB 4: INNOVATION -->
-        <div id="view-tech" class="fade-in hidden">
-             <div class="bg-slate-900 rounded-lg p-8 shadow-xl border-l-8 border-emerald-400 relative overflow-hidden group max-w-4xl mx-auto">
-                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <svg class="w-48 h-48 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                </div>
-                <div class="relative z-10">
-                    <div class="flex items-center mb-6">
-                        <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider border border-emerald-500/30 mr-4">Tech & Innovation</span>
-                        <h3 class="font-bold text-white text-2xl">Innovation par l'exemple</h3>
-                    </div>
-                    <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-2xl">
-                        Ce profil interactif a été conçu, piloté et mis en ligne à 100% par mes soins grâce à l'IA générative. C'est la preuve concrète de mon agilité technologique pour transformer les défis en résultats tangibles.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-400 border-t border-slate-700/50 pt-8">
-                        <div class="flex items-start p-4 rounded bg-slate-800/50">
-                            <svg class="w-6 h-6 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <div>
-                                <strong class="text-white block mb-1">0% Développeur</strong>
-                                <span>Pilotage de la technologie en langage naturel.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-start p-4 rounded bg-slate-800/50">
-                            <svg class="w-6 h-6 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                            <div>
-                                <strong class="text-white block mb-1">100% Agile</strong>
-                                <span>Capacité à s'adapter et à délivrer de la valeur sans intermédiaire.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TAB 5: MODALITÉS -->
-        <div id="view-modalites" class="fade-in hidden">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <!-- Secteurs Ciblés -->
-                <div class="bg-white rounded border border-slate-200 p-6 shadow-sm">
-                    <h3 class="font-bold text-xs text-slate-400 mb-3 uppercase tracking-widest">Secteurs ciblés</h3>
-                    <p class="text-slate-800 text-sm font-semibold leading-relaxed">
-                        Services B2B, B2C, Industrie, Retail, Tech... tout environnement tourné vers la transformation.
+                <!-- Bloc Mon Parcours pleine largeur -->
+                <div class="bg-white p-10 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Mon Parcours</h3>
+                    <p class="text-slate-600 leading-relaxed text-[15px]">
+                        Issue du marketing, de la communication et de l'acquisition (Ex-Teleperformance, Quadient), j’ai mené divers projets transverses dans des contextes multiculturels exigeants. Évoluer dans des environnements en constante transformation a forgé ma résilience et mon agilité. Cette capacité d’adaptation me permet aujourd'hui de <strong>piloter des stratégies marketing complexes.</strong>
                     </p>
                 </div>
+            </div>
+        </section>
 
-                <!-- Langues -->
-                <div class="bg-white rounded border border-slate-200 p-6 shadow-sm">
-                    <h3 class="font-bold text-xs text-slate-400 mb-3 uppercase tracking-widest">Langues</h3>
+        <!-- SECTION: EXPERTISES -->
+        <section id="view-expertise" class="hidden fade-in space-y-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <button onclick="switchExpertise('gtm')" id="btn-gtm" class="sub-tab-active p-6 rounded-xl transition-all text-left group">
+                    <h4 class="font-extrabold text-sm text-slate-900 group-hover:text-orange-600">GTM & Acquisition</h4>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Growth & Demand Gen</p>
+                </button>
+                <button onclick="switchExpertise('brand')" id="btn-brand" class="sub-tab-inactive p-6 rounded-xl transition-all text-left group">
+                    <h4 class="font-extrabold text-sm text-slate-900 group-hover:text-orange-600">Branding & Com</h4>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Image & Influence</p>
+                </button>
+                <button onclick="switchExpertise('product')" id="btn-product" class="sub-tab-inactive p-6 rounded-xl transition-all text-left group">
+                    <h4 class="font-extrabold text-sm text-slate-900 group-hover:text-orange-600">Product Marketing</h4>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">UX & Client</p>
+                </button>
+                <button onclick="switchExpertise('martech')" id="btn-martech" class="sub-tab-inactive p-6 rounded-xl transition-all text-left group">
+                    <h4 class="font-extrabold text-sm text-slate-900 group-hover:text-orange-600">Projets Transverses</h4>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">MarTech & Management</p>
+                </button>
+            </div>
+            <div class="bg-white p-10 rounded-xl border border-slate-200 shadow-sm min-h-[160px]">
+                <div id="exp-gtm" class="block fade-in">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center"><span class="w-2 h-2 bg-orange-600 rounded-full mr-3"></span>Stratégie GTM & Demand Generation</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">Industrialisation de l'acquisition, déploiement d'une architecture Inbound Marketing et mise en place de stratégies ABM pour les comptes stratégiques. Focus sur l'efficacité des tunnels de vente et le coût d'acquisition. <strong>Exemple : Gestion de +40 000 leads/an, +15 canaux d'acquisition.</strong></p>
+                </div>
+                <div id="exp-brand" class="hidden fade-in">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center"><span class="w-2 h-2 bg-slate-800 rounded-full mr-3"></span>Branding, Image & Transformation</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">Pilotage de rebrandings identitaires, création d'événements propriétaires "Thought Leadership" (Adopt AI sous le Haut Patronage d'Emmanuel Macron) et orchestration de la communication externe globale pour asseoir la notoriété.</p>
+                </div>
+                <div id="exp-product" class="hidden fade-in">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center"><span class="w-2 h-2 bg-orange-600 rounded-full mr-3"></span>Product Marketing & Expérience Client</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">Accompagnement de la roadmap produit, Product Ownership, optimisation continue des tunnels de conversion <strong>(suivi ROI du funnel MQL > SAL > SQL)</strong> et analyse approfondie des pain points clients.</p>
+                </div>
+                <div id="exp-martech" class="hidden fade-in">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center"><span class="w-2 h-2 bg-slate-800 rounded-full mr-3"></span>Mécanique Collective & MarTech</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">Management transverse et alignement étroit Sales/Marketing. Pilotage de la stack technologique (Salesforce, Marketo) et intégration de l'IA générative.</p>
+                </div>
+            </div>
+            <div class="bg-[#ea580c] rounded-xl p-6 text-white shadow-md flex flex-col md:flex-row items-center gap-6 border-b-4 border-orange-700">
+                <div class="text-4xl font-black opacity-30 select-none">ROI</div>
+                <div class="md:border-l md:border-white/20 md:pl-6">
+                    <h3 class="font-bold uppercase tracking-[0.2em] text-[10px] mb-1">Socle Stratégique : Culture du Résultat</h3>
+                    <p class="text-[13px] text-orange-50 leading-relaxed mb-1">Chaque action est pilotée par la performance. Ma culture du chiffre impose un suivi rigoureux des KPIs et une obsession pour la rentabilité.</p>
+                    <p class="text-[12px] text-white font-bold">Exemples de campagnes : +300% de leads sur une offre dématérialisation, 1 M€ de revenu sécurisé sur 2 ans.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: LEADERSHIP -->
+        <section id="view-leadership" class="hidden fade-in">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                
+                <!-- Colonne Soft Skills -->
+                <div class="bg-white p-10 rounded-xl border border-slate-200 shadow-sm space-y-10">
+                    <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight border-b border-slate-50 pb-4">SOFT SKILLS</h3>
+                    
                     <div class="space-y-2">
-                        <div>
-                            <span class="text-sm font-bold text-slate-800 mr-1">Français</span>
-                            <span class="text-[10px] text-slate-500 lowercase font-medium italic">natif</span>
-                        </div>
-                        <div>
-                            <span class="text-sm font-bold text-slate-800 mr-1">Anglais</span>
-                            <span class="text-[10px] text-slate-500 lowercase font-medium italic">professionnel</span>
-                        </div>
-                        <div>
-                            <span class="text-sm font-bold text-slate-800 mr-1">Espagnol</span>
-                        </div>
+                        <h4 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">PILOTAGE COLLABORATIF</h4>
+                        <p class="text-slate-500 text-sm">Écoute active et décloisonnement des silos.</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">RIGUEUR & EXCELLENCE ORGANISATIONNELLE</h4>
+                        <p class="text-slate-500 text-sm">Maîtrise de la structuration de projets complexes et de l'organisation d'événements.</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">GESTION DES PRIORITÉS</h4>
+                        <p class="text-slate-500 text-sm">Navigue agilement entre l'urgence opérationnelle et la planification stratégique.</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">EFFICACITÉ OPÉRATIONNELLE</h4>
+                        <p class="text-slate-500 text-sm">Orientée solutions, ténacité et proactivité.</p>
                     </div>
                 </div>
 
-                <!-- Outils -->
-                <div class="bg-white rounded border border-slate-200 p-6 shadow-sm">
-                    <h3 class="font-bold text-xs text-slate-400 mb-3 uppercase tracking-widest">Écosystème & Outils</h3>
+                <!-- Colonne Recommandation -->
+                <div class="bg-white p-8 rounded-xl border-l-[5px] border-orange-600 shadow-sm relative">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-extrabold text-slate-900 text-xs uppercase tracking-widest">RECOMMANDATION</h3>
+                        <a href="https://www.linkedin.com/in/virginiedharcourt" target="_blank" class="text-orange-600 font-bold text-[10px] hover:underline uppercase tracking-wider">Voir LinkedIn</a>
+                    </div>
+                    
+                    <p class="text-slate-600 italic leading-relaxed text-sm">
+                        "Virginie apporte une combinaison d'expertise marketing solide et d'une forte capacité d'exécution. Elle est fiable, proactive et toujours orientée vers la recherche de solutions — pas seulement pour son propre périmètre, mais pour l'équipe élargie."
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: MODALITÉS -->
+        <section id="view-modalites" class="hidden fade-in space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">LANGUES</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-slate-50 pb-2">
+                            <span class="text-sm font-bold text-slate-900 uppercase">Français</span>
+                            <span class="text-[10px] text-slate-400 italic font-medium tracking-wide">natif</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-50 pb-2">
+                            <span class="text-sm font-bold text-slate-900 uppercase">Anglais</span>
+                            <span class="text-[10px] text-slate-400 italic font-medium tracking-wide">professionnel</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-bold text-slate-900 uppercase tracking-wider">Espagnol</span>
+                            <span class="text-[10px] text-slate-400 italic font-medium tracking-wide">courant</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">ÉCOSYSTÈME & OUTILS</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-0.5 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100">Salesforce</span>
-                        <span class="px-2 py-0.5 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100">Marketo</span>
-                        <span class="px-2 py-0.5 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100">Pardot</span>
-                        <span class="px-2 py-0.5 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100">Asana</span>
-                        <span class="px-2 py-0.5 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100">Canva</span>
-                        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 flex items-center">ChatGPT</span>
-                        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 flex items-center">Gemini</span>
-                        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 flex items-center">IA Générative</span>
-                        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 flex items-center">Veille IA Stratégique</span>
+                        <span class="px-3 py-1 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100 uppercase tracking-tighter">Salesforce</span>
+                        <span class="px-3 py-1 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100 uppercase tracking-tighter">Marketo</span>
+                        <span class="px-3 py-1 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100 uppercase tracking-tighter">Pardot</span>
+                        <span class="px-3 py-1 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100 uppercase tracking-tighter">Asana</span>
+                        <span class="px-3 py-1 bg-slate-50 text-slate-600 rounded text-[10px] font-bold border border-slate-100 uppercase tracking-tighter">Canva</span>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 uppercase tracking-tighter italic">ChatGPT</span>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 uppercase tracking-tighter italic">Gemini</span>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 uppercase tracking-tighter italic">IA Générative</span>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded text-[10px] font-bold border border-emerald-100 uppercase tracking-tighter italic">Veille IA Stratégique</span>
                     </div>
                 </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-center">
-                <div class="bg-white rounded border border-slate-200 p-8 hover:border-orange-500 transition-colors">
-                    <h3 class="font-bold text-xl text-slate-900 mb-2 uppercase tracking-wide">CDI / CDD</h3>
-                    <p class="text-sm font-bold text-slate-800">France & Europe<br><span class="text-slate-500 font-normal">Hybride / Présentiel / Remote</span></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-10 rounded-xl border border-slate-200 shadow-sm text-center">
+                    <h3 class="text-xl font-extrabold text-[#0f172a] mb-2 tracking-tighter">CDI / CDD</h3>
+                    <p class="text-xs font-bold text-slate-900 mb-1">France & Europe</p>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest">Hybride / Présentiel / Remote</p>
                 </div>
-                <div class="bg-white rounded border border-slate-200 p-8 hover:border-orange-500 transition-colors">
-                    <h3 class="font-bold text-xl text-slate-900 mb-2 uppercase tracking-wide">Transition</h3>
-                    <p class="text-sm font-bold text-slate-800">France & Europe<br><span class="text-slate-500 font-normal">Hybride / Présentiel / Remote</span></p>
-                </div>
-                <div class="bg-white rounded border border-slate-200 p-8 hover:border-orange-500 transition-colors">
-                    <h3 class="font-bold text-xl text-slate-900 mb-2 uppercase tracking-wide">Temps Partagé</h3>
-                    <p class="text-sm font-bold text-slate-800">Flexibilité budgétaire</p>
+                <div class="bg-white p-10 rounded-xl border border-slate-200 shadow-sm text-center">
+                    <h3 class="text-xl font-extrabold text-[#0f172a] mb-2 tracking-tighter">TRANSITION</h3>
+                    <p class="text-xs font-bold text-slate-900 mb-1">France & Europe</p>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest">Hybride / Présentiel / Remote</p>
                 </div>
             </div>
-
-            <div class="bg-slate-100 rounded p-8 text-center max-w-2xl mx-auto border border-slate-200">
-                <a href="https://www.linkedin.com/in/virginiedharcourt" target="_blank" class="inline-flex items-center justify-center bg-[#0077b5] hover:bg-[#006396] text-white font-bold py-3 px-8 rounded transition-colors shadow-sm">
+            <div class="bg-[#F8FAFC] rounded-xl p-10 border border-slate-100 text-center">
+                <a href="https://www.linkedin.com/in/virginiedharcourt" target="_blank" class="inline-block bg-[#0077B5] hover:bg-[#006097] text-white font-extrabold py-4 px-12 rounded-lg transition-all shadow-md text-sm tracking-wide">
                     Me Contacter sur LinkedIn
                 </a>
             </div>
-        </div>
+        </section>
+
+        <!-- SECTION: INNOVATION -->
+        <section id="view-innovation" class="hidden fade-in space-y-12">
+            <!-- Bloc "Innovation par l'exemple" -->
+            <div class="bg-[#0f172a] rounded-2xl p-10 shadow-2xl relative overflow-hidden border-l-[6px] border-emerald-500">
+                <div class="relative z-10 flex flex-col md:flex-row gap-10 items-center md:items-start">
+                    <div class="flex-grow space-y-6">
+                        <div class="inline-block bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-4 py-2 rounded-md uppercase border border-emerald-500/20 tracking-widest">
+                            TECH & INNOVATION
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Innovation par l'exemple</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed max-w-3xl">
+                            Ce profil interactif a été conçu, piloté et mis en ligne à 100% par mes soins grâce à l'IA générative. C'est la preuve concrète de mon agilité technologique pour transformer les défis en résultats tangibles.
+                        </p>
+                        
+                        <!-- Mini Grille de stats Innovation -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+                            <div class="bg-white/5 p-6 rounded-xl border border-white/5 flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">0% Développeur</h4>
+                                    <p class="text-slate-400 text-xs mt-1">Pilotage de la technologie en langage naturel.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 p-6 rounded-xl border border-white/5 flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">100% Agile</h4>
+                                    <p class="text-slate-400 text-xs mt-1">Capacité à s'adapter et à délivrer de la valeur sans intermédiaire.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Graphique décoratif -->
+                    <div class="hidden lg:flex items-center justify-center opacity-10 select-none">
+                        <svg class="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-400">
-        © 2026 Virginie d’Harcourt
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-100 py-12 text-center">
+        <p class="text-[10px] text-slate-400 uppercase tracking-[0.3em]">© 2026 Virginie d’Harcourt</p>
     </footer>
 
     <script>
-        const expertiseData = {
-            marketing: {
-                title: "Dir. Marketing et Com",
-                subtitle: "Orchestrer la stratégie au service du business et de la culture d’entreprise",
-                savoirFaire: "Acquisition (Lead Gen), stratégie de marque (branding), communication interne et externe, marque employeur, digital marketing, événements stratégiques, France/EMEA",
-                approche: "Identification des pain points et des personas. Gestion de budgets, optimisation du coût d'acquisition. Décloisonnement des silos par une communication interne fédératrice. Animation de réseau et de marque employeur. Maîtrise de l'organisation d'événements.",
-                refs: "Rebranding et refonte identitaire. Stratégie d'acquisition et communication omnicanale. Animation de réseaux et de forces de vente de +200 personnes. (Teleperformance, Quadient, Reed)"
-            },
-            staff: {
-                title: "Chief of Staff (CoS)",
-                subtitle: "Transformer la vision en réalité opérationnelle",
-                savoirFaire: "Pilotage de projets, lancements de produits, création d'un nouveau branding, gestion des priorités, ROI, reporting.",
-                approche: "Coordination transverse (RH, sales, Direction, Opérations, Finance...), traduction de la vision en langage opérationnel, rigueur, obsession du client",
-                refs: "Projets transverses impliquant plusieurs départements (Responsable acquisition France chez Quadient<br>Directrice marketing chez Teleperformance)"
-            },
-            project: {
-                title: "Dir. Projets Transverses",
-                subtitle: "Pilotage stratégique & Efficacité opérationnelle",
-                savoirFaire: "Pilotage de road-map, coordination entre départements, structuration des processus et suivi des KPIs (ROI/Délai), gestion des délais et des risques.",
-                approche: "Casser les silos par l'intelligence collective et l'écoute. Pragmatique, orientée résultats et solutions concretes.",
-                refs: "Structuration marketing et comm, pilotage efficacité commerciale, reporting, arbitrages de budgets, pilotage de prestataires (Teleperformance et Quadient)"
-            }
+        const views = {
+            approche: document.getElementById('view-approche'),
+            expertise: document.getElementById('view-expertise'),
+            leadership: document.getElementById('view-leadership'),
+            modalites: document.getElementById('view-modalites'),
+            innovation: document.getElementById('view-innovation')
+        };
+        const navButtons = {
+            approche: document.getElementById('nav-approche'),
+            expertise: document.getElementById('nav-expertise'),
+            leadership: document.getElementById('nav-leadership'),
+            modalites: document.getElementById('nav-modalites'),
+            innovation: document.getElementById('nav-innovation')
         };
 
-        const views = { valeur: document.getElementById('view-valeur'), expertise: document.getElementById('view-expertise'), style: document.getElementById('view-style'), tech: document.getElementById('view-tech'), modalites: document.getElementById('view-modalites') };
-        const navButtons = { valeur: document.getElementById('nav-valeur'), expertise: document.getElementById('nav-expertise'), style: document.getElementById('nav-style'), tech: document.getElementById('nav-tech'), modalites: document.getElementById('nav-modalites') };
-
-        function switchTab(tabId) {
+        function switchTab(targetId) {
             Object.keys(views).forEach(key => {
-                views[key].classList.toggle('hidden', key !== tabId);
-                navButtons[key].className = key === tabId ? 'active-tab py-4 px-1 text-sm uppercase tracking-wide transition-all whitespace-nowrap' : 'inactive-tab py-4 px-1 text-sm uppercase tracking-wide transition-all whitespace-nowrap';
+                if(views[key]) views[key].classList.add('hidden');
+                if(navButtons[key]) navButtons[key].className = 'tab-inactive py-5 px-1 text-xs uppercase tracking-widest transition-all whitespace-nowrap';
             });
+            if(views[targetId]) views[targetId].classList.remove('hidden');
+            if(navButtons[targetId]) navButtons[targetId].className = 'tab-active py-5 px-1 text-xs uppercase tracking-widest transition-all whitespace-nowrap';
         }
 
-        function showExpertiseDetail(key) {
-            const data = expertiseData[key];
-            const container = document.getElementById('expertise-detail-container');
-            ['marketing', 'staff', 'project'].forEach(k => document.getElementById('btn-' + k).className = "p-6 rounded bg-white border border-slate-200 text-left transition-all shadow-sm " + (k === key ? "ring-2 ring-orange-600 ring-offset-2" : "hover:shadow-md"));
-            container.innerHTML = `<div class="fade-in"><h3 class="text-2xl font-bold text-slate-900 mb-1">${data.title}</h3><p class="text-slate-500 font-medium mb-6">${data.subtitle}</p><div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div><h4 class="text-xs uppercase text-slate-400 font-bold mb-2">Savoir-Faire</h4><p class="text-slate-900 mb-4">${data.savoirFaire}</p><h4 class="text-xs uppercase text-slate-400 font-bold mb-2">Approche</h4><p class="text-slate-600 text-sm">${data.approche}</p></div><div class="bg-slate-50 rounded p-4 border-l-4 border-slate-900"><h4 class="text-xs uppercase text-slate-800 font-bold mb-2">Références</h4><p class="text-slate-700 italic text-sm">${data.refs}</p></div></div></div>`;
+        const expDivs = { gtm: document.getElementById('exp-gtm'), brand: document.getElementById('exp-brand'), product: document.getElementById('exp-product'), martech: document.getElementById('exp-martech') };
+        const expBtns = { gtm: document.getElementById('btn-gtm'), brand: document.getElementById('btn-brand'), product: document.getElementById('btn-product'), martech: document.getElementById('btn-martech') };
+
+        function switchExpertise(expId) {
+            Object.keys(expDivs).forEach(key => {
+                expDivs[key].classList.add('hidden');
+                expBtns[key].className = 'sub-tab-inactive p-6 rounded-xl transition-all text-left group';
+            });
+            expDivs[expId].classList.remove('hidden');
+            expBtns[expId].className = 'sub-tab-active p-6 rounded-xl transition-all text-left group';
         }
-        document.addEventListener('DOMContentLoaded', () => showExpertiseDetail('marketing'));
     </script>
 </body>
 </html>
